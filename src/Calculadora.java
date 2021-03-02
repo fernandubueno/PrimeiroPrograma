@@ -12,15 +12,16 @@ public class Calculadora {
 		
 		Scanner leitor = new Scanner(System.in);
 		
-		double primeiroValor;
-		double segundoValor;
-		double soma, subtracao, multiplicacao, divisao;
+		int primeiroValor;
+		int segundoValor;
+		int soma, subtracao, multiplicacao;
+		double divisao;
 		
 		System.out.println("Por favor, digite um valor: ");
-		primeiroValor = leitor.nextDouble();
+		primeiroValor = leitor.nextInt();
 		
 		System.out.println("Por favor, digite o segundo valor: ");
-		segundoValor = leitor.nextDouble();
+		segundoValor = leitor.nextInt();
 		
 		soma = primeiroValor + segundoValor;
 		System.out.println("A soma entre os dois valores é " + soma);
@@ -31,7 +32,7 @@ public class Calculadora {
 		multiplicacao = primeiroValor * segundoValor;
 		System.out.println("A multiplicação entre os dois valores é " + multiplicacao);
 		
-		divisao = primeiroValor / segundoValor;
+		divisao = primeiroValor / (double) segundoValor;
 		System.out.println("A divisão entre os dois valores é " + divisao);
 		
 		leitor.close();
